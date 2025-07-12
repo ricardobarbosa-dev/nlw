@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <title>Assistente de Meta</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/images/logo.png" alt="Logo" />
+    </header>
+
+    <main>
+      <section>
+        <div>
+          <h2>Assistente de Meta</h2>
+          <p>Pergunte sobre estratégias, build e dicas para seus jogos.</p>
+
+          <form id="form">
+            <input
+              id="apiKey"
+              type="password"
+              placeholder="Informe a API KEY do Gemini"
+              required
+            />
+            <select id="gameSelect">
+              <option value="">Selecione um jogo</option>
+              <option value="valorant">Valorant</option>
+              <option value="lol">League of Legends</option>
+              <option value="cs2">Counter-Strike 2</option>
+              <option value="warzone">Call of Duty: WARZONE</option>
+            </select>
+            <input
+              id="questionInput"
+              type="text"
+              placeholder="Ex: Melhor build para ADC"
+              required
+            />
+            <button id="askButton">Perguntar</button>
+          </form>
+
+          <div id="aiResponse" class="hidden">
+            <div class="response-content"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  </body>
+</html>
